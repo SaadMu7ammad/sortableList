@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* max-width: 500px; */
+  /* width: 100%; */
+  margin: 0 auto;
+}
+ul {
+  padding: 0;
+}
+li {
+  /* font-size: 15px; */
+  /* max-width: 300px; */
+  /* width: 100%; */
+  list-style: none;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  /* padding: 0 20px 0 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+li.over .draggable{
+  background-color: #eaeaea;
+}
+li:last-of-type {
+  border-bottom: 1px solid var(--border-color);
+}
+li span {
+  font-size: 30px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  height: 60px;
+  width: 60px;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 10px; */
+}
+.draggable {
+  cursor: pointer;
+  padding: 5px;
+  /* height: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-right: 10px; */
+  /* property ensures draggable element taking all the available space*/
+  flex: 1;
+}
+
+.draggable i {
+  margin: 0px 10px 0px 50px;
+}
+.check-btn {
+  border: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.draggable-list li.true .person-name {
+  color: #3ae374;
+}
+.draggable-list li.false .person-name {
+  color: #ff3838;
+}
